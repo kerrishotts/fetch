@@ -1,8 +1,8 @@
 {
-  "name": "whatwg-fetch",
+  "name": "whatwg-fetch-local",
   "version": "0.10.1",
   "main": "fetch.js",
-  "repository": "github/fetch",
+  "repository": "https://github.com/kerrishotts/fetch",
   "licenses": [
     {
       "type": "MIT",

@@ -1,4 +1,4 @@
-# window.fetch polyfill
+# window.fetch polyfill [with local file:// support]
 
 This project adheres to the [Open Code of Conduct][code-of-conduct]. By participating, you are expected to uphold this code.
 [code-of-conduct]: http://todogroup.org/opencodeofconduct/#fetch/opensource@github.com
@@ -7,24 +7,16 @@ The global `fetch` function is an easier way to make web requests and handle
 responses than using an XMLHttpRequest. This polyfill is written as closely as
 possible to the standard Fetch specification at https://fetch.spec.whatwg.org.
 
+NOTE: This fork permits fetching local files (file://), which is often required when creating hybrid applications. In this instance,
+XHR's status is often returned as zero. When checking for success, the original version of this module will throw an error. This
+fork will treat the zero as an acceptable response.
+
 ## Installation
 
-Available on [Bower](http://bower.io) as **fetch**.
+This can be installed with `npm`.
 
 ```sh
-$ bower install fetch
-```
-
-You'll also need a Promise polyfill for [older browsers](http://caniuse.com/#feat=promises).
-
-```sh
-$ bower install es6-promise
-```
-
-This can also be installed with `npm`.
-
-```sh
-$ npm install whatwg-fetch --save
+$ npm install https://github.com/kerrishotts/fetch --save
 ```
 
 For a node.js implementation, try [node-fetch](https://github.com/bitinn/node-fetch).
